@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Full-Stack Software Engineer building scalable ERP solutions" />
+<title>Kamrul Islam — Full-Stack Software Engineer building scalable ERP solutions</title>
+<style>
+:root{--bg:#f7f7f2;--surface:#fff;--ink:#17221d;--muted:#66716b;--line:#e4e8e1;--accent:#b8f36b;--accent-dark:#243b19;--soft:#edf3e7;--radius:22px;--max:1120px}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--max),calc(100% - 40px));margin:0 auto}
+.nav{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:20px 0;gap:16px}
+.brand{font-weight:850;letter-spacing:-.04em;font-size:1.2rem}
+.brand span{color:#6a9d35}
+.nav-links{display:flex;flex-wrap:wrap;align-items:center;gap:20px;color:var(--muted);font-size:.92rem}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid var(--ink);border-radius:999px;padding:11px 18px;font-weight:700;font-size:.9rem}
+.button.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-dark)}
+.hero{padding:40px 0 48px;display:grid;grid-template-columns:1fr;gap:32px;align-items:center}
+@media(min-width:860px){.hero{grid-template-columns:1.25fr .75fr;padding:60px 0}}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;color:#557b2c;font-weight:800;text-transform:uppercase;letter-spacing:.12em;font-size:.76rem}
+.dot{width:8px;height:8px;border-radius:50%;background:#7ebd3c;box-shadow:0 0 0 5px #e2f4d0}
+h1{font-size:clamp(2.2rem,7vw,5rem);line-height:1.03;letter-spacing:-.04em;margin:18px 0;max-width:780px}
+.hero-copy{color:var(--muted);font-size:1.08rem;max-width:620px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.hero-card{background:var(--accent);border-radius:30px;padding:28px;min-height:320px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.avatar{width:100px;height:100px;border-radius:28px;background:var(--accent-dark);color:var(--accent);display:grid;place-items:center;font-size:2.1rem;font-weight:850;letter-spacing:-.08em}
+.card-bottom{display:flex;justify-content:space-between;align-items:end;gap:15px}
+.card-name{font-size:1.7rem;font-weight:850;letter-spacing:-.05em;line-height:1.05;margin:4px 0;color:var(--accent-dark)}
+.card-role{max-width:220px;font-size:.9rem;color:var(--accent-dark)}
+.availability{background:rgba(255,255,255,.55);padding:8px 12px;border-radius:99px;font-size:.75rem;font-weight:750;color:var(--accent-dark);white-space:nowrap}
+section{padding:48px 0}
+.section-kicker{color:#6a9d35;text-transform:uppercase;font-size:.76rem;font-weight:850;letter-spacing:.13em}
+h2{margin:6px 0 24px;font-size:clamp(1.7rem,4vw,2.6rem);letter-spacing:-.04em;line-height:1.05}
+.about-grid{display:grid;grid-template-columns:1fr;gap:24px}
+@media(min-width:860px){.about-grid{grid-template-columns:.85fr 1.15fr}}
+.about-note{background:var(--soft);padding:28px;border-radius:var(--radius)}
+.about-text{font-size:1.05rem;color:var(--muted)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.stat{border-top:1px solid #cdd8c3;padding-top:10px}
+.stat b{display:block;font-size:1.4rem;letter-spacing:-.04em}
+.stat span{font-size:.78rem;color:var(--muted)}
+.skills{display:flex;flex-wrap:wrap;gap:10px}
+.skill{border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:10px 15px;font-size:.9rem;font-weight:650}
+.projects-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:700px){.projects-grid{grid-template-columns:repeat(2,1fr)}}
+.project{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;min-height:200px}
+.project-number{color:#7a877e;font-size:.82rem;font-weight:800}
+.project h3{font-size:1.3rem;letter-spacing:-.03em;margin:18px 0 6px}
+.project p{color:var(--muted);margin:0 0 16px}
+.project-link{display:inline-flex;align-items:center;gap:6px;color:#6a9d35;font-weight:800;font-size:.88rem;margin-bottom:12px}
+.tags{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto}
+.tag{font-size:.75rem;background:var(--soft);color:#4d6834;border-radius:6px;padding:5px 8px;font-weight:700}
+.timeline-item{padding:20px 0;border-bottom:1px solid var(--line)}
+.timeline-item h3{margin:0;font-size:1.15rem;letter-spacing:-.03em}
+.timeline-company{color:#6a9d35;font-weight:750;margin:3px 0 8px}
+.timeline-item p{margin:0;color:var(--muted)}
+.education-card{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;background:var(--soft);padding:24px;border-radius:var(--radius);margin-bottom:12px}
+.education-card h3{margin:0;font-size:1.1rem}
+.education-card p{color:var(--muted);margin:4px 0 0}
+.education-year{font-weight:800;white-space:nowrap}
+.contact{background:var(--ink);color:#fff;border-radius:30px;padding:clamp(24px,6vw,56px);display:grid;grid-template-columns:1fr;gap:20px}
+@media(min-width:860px){.contact{grid-template-columns:1fr auto;align-items:end}}
+.contact .section-kicker{color:var(--accent)}
+.contact h2{max-width:650px;font-size:clamp(1.8rem,5vw,3rem);margin-bottom:10px}
+.contact p{color:#b7c2ba;max-width:550px}
+.contact .button{background:var(--accent);color:var(--accent-dark);border-color:var(--accent);white-space:nowrap}
+footer{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;padding:24px 0;color:var(--muted);font-size:.85rem}
+.socials{display:flex;gap:16px}
+</style>
+</head>
+<body>
+<header class="container"><nav class="nav" aria-label="Main navigation">
+  <a class="brand" href="#home">kamrul<span>.</span></a>
+  <div class="nav-links"><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#education">Education</a></div>
+</nav></header>
+<main>
+<section class="container hero" id="home">
+  <div>
+    <div class="eyebrow"><span class="dot"></span> Available for opportunities</div>
+    <h1>Kamrul Islam</h1>
+    <p class="hero-copy" style="color:#6a9d35;font-weight:600">Full-Stack Software Engineer building scalable ERP solutions</p>
+    <p class="hero-copy">I am a results-driven Full-Stack Software Engineer with over a year of experience in developing and optimizing scalable enterprise applications. Using technologies like .NET, C#, and React.js, I have a proven track record of enhancing system performance by up to 40% and reducing report generation times. I am adept at collaborating with cross-functional teams, mentoring junior developers, and delivering robust, user-centric software.</p>
+    <div class="hero-actions">
+      <a class="button primary" href="#projects">Explore my work ↓</a>
+      <a class="button" href="#contact">Get in touch ↗</a>
+    </div>
+  </div>
+  
+    <aside class="hero-card" aria-label="Profile card">
+      <div class="avatar">KI</div>
+      <div class="card-bottom">
+        <div>
+          <div class="card-name">Kamrul Islam</div>
+          <div class="card-role">Full-Stack Software Engineer building scalable ERP solutions</div>
+        </div>
+        <span class="availability">Open to work</span>
+      </div>
+    </aside>
+</section>
+<section class="container" id="about"><div class="section-kicker">01 / About</div><h2>A little about me</h2><div class="about-grid">
+          <div class="about-note"><div class="stats">
+            <div class="stat"><b>2</b><span>Roles highlighted</span></div>
+            <div class="stat"><b>4</b><span>Projects shipped</span></div>
+            <div class="stat"><b>25</b><span>Core skills</span></div>
+          </div></div>
+          <p class="about-text">I am a results-driven Full-Stack Software Engineer with over a year of experience in developing and optimizing scalable enterprise applications. Using technologies like .NET, C#, and React.js, I have a proven track record of enhancing system performance by up to 40% and reducing report generation times. I am adept at collaborating with cross-functional teams, mentoring junior developers, and delivering robust, user-centric software.</p>
+        </div></section>
+<section class="container" id="skills"><div class="section-kicker">02 / Toolkit</div><h2>Skills &amp; technologies</h2><div class="skills"><span class="skill">React.js</span><span class="skill">JavaScript</span><span class="skill">HTML5</span><span class="skill">CSS3</span><span class="skill">Tailwind CSS</span><span class="skill">Material-UI</span><span class="skill">Zustand/Redux</span><span class="skill">.NET Core</span><span class="skill">C#</span><span class="skill">Node.js</span><span class="skill">RESTful APIs</span><span class="skill">MS SQL Server</span><span class="skill">MongoDB</span><span class="skill">Git</span><span class="skill">Firebase</span><span class="skill">Swagger</span><span class="skill">Redis</span><span class="skill">Docker</span><span class="skill">Jest</span><span class="skill">Agile</span><span class="skill">Scrum</span><span class="skill">CI/CD</span><span class="skill">OOP</span><span class="skill">Performance Optimization</span><span class="skill">Unit Testing</span></div></section>
+<section class="container" id="projects"><div class="section-kicker">03 / Selected work</div><h2>Projects I&#39;m proud of</h2><div class="projects-grid"><article class="project">
+                <span class="project-number">PROJECT 01</span>
+                <h3>CV Maker Automation</h3>
+                <p>I engineered an automated CV creation system utilizing OpenCV and PyTesseract for robust document processing and non-LLM extractive summarization.</p>
+                
+                
+              </article><article class="project">
+                <span class="project-number">PROJECT 02</span>
+                <h3>Foodi ETA</h3>
+                <p>I spearheaded the deployment of the Foodi ETA project, using historical delivery data to optimize performance while containerizing the infrastructure with Docker and Kubernetes.</p>
+                
+                <div class="tags"><span class="tag">Docker</span></div>
+              </article><article class="project">
+                <span class="project-number">PROJECT 03</span>
+                <h3>NextHR CV Parser</h3>
+                <p>I enhanced the NextHR CV Parser using advanced OpenCV denoise and deskew techniques, elevating data extraction precision across all certificate fields.</p>
+                
+                
+              </article><article class="project">
+                <span class="project-number">PROJECT 04</span>
+                <h3>Multivendor E-commerce Website</h3>
+                <p>I developed a full-stack platform using the MERN stack featuring real-time chat, secure payments, seller dashboards, and admin management.</p>
+                <a class="project-link" href="https://github.com/mdyeasin07/bengaldeli-multivendor" target="_blank" rel="noreferrer">View project ↗</a>
+                
+              </article></div></section>
+<section class="container" id="experience"><div class="section-kicker">04 / Experience</div><h2>Where I&#39;ve worked</h2><div class="timeline-item">
+                <h3>Executive, Software Development</h3>
+                <div class="timeline-company">Cultivie8 Technologies (Jan 2025 - Present)</div>
+                <p>I spearheaded the end-to-end development of ERP modules for payroll and employee management, while overhauling database schemas to reduce report generation time by 30%.</p>
+              </div><div class="timeline-item">
+                <h3>Software Engineer Intern</h3>
+                <div class="timeline-company">Cultivie8 Technologies (Sept 2024 - Dec 2024)</div>
+                <p>I implemented session storage for search persistence across ERP task pages and assisted in debugging workflows to reduce QA cycle times.</p>
+              </div></section>
+<section class="container" id="education"><div class="section-kicker">05 / Education</div><h2>Learning &amp; education</h2><div class="education-card">
+                <div>
+                  <h3>Bachelor of Science in Computer Science and Engineering</h3>
+                  <p>Green University of Bangladesh</p>
+                </div>
+                <div class="education-year">2024</div>
+              </div><div class="education-card">
+                <div>
+                  <h3>Higher Secondary Certificate</h3>
+                  <p>Kabi Nazrul Government College</p>
+                </div>
+                <div class="education-year">2019</div>
+              </div><div class="education-card">
+                <div>
+                  <h3>Secondary School Certificate</h3>
+                  <p>Hazi Moazzem Ali Adarsha High School</p>
+                </div>
+                <div class="education-year">2017</div>
+              </div></section>
+<section class="container" id="contact"><div class="contact">
+        <div>
+          <div class="section-kicker">06 / Contact</div>
+          <h2>Have a project in mind? Let's make it happen.</h2>
+          <p>Dhaka, Bangladesh · kislam4@gmail.com</p>
+        </div>
+        <a class="button" href="mailto:kislam4@gmail.com">Email me ↗</a>
+      </div></section>
+</main>
+<footer class="container">
+  <span>© 2026 Kamrul Islam. Built with CareerCraft.</span>
+  <div class="socials">
+        <a href="linkedin.com/kamrul-islam" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a href="github.com/kamrul-islam" target="_blank" rel="noreferrer">Website ↗</a>
+        <a href="mailto:kislam4@gmail.com">Email ↗</a>
+      </div>
+</footer>
+</body>
+</html>
